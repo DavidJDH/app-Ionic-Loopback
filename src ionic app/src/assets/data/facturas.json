@@ -1,0 +1,32 @@
+{
+  "Facturas": [
+    {
+      "id": "1",
+      "Nombre": "Buso",
+      "status": true,
+      "Detalle": "Buso con botones y hoodie",
+      "precio": "67000"
+    },
+    {
+      "id": "2",
+      "Nombre": "Jeans",
+      "status": true,
+      "Detalle": "Jeans color azul pegado al cuerpo",
+      "precio": "99000"
+    },
+    {
+      "id": "3",
+      "Nombre": "Falda",
+      "status": false,
+      "Detalle": "Falda con bordes cuadrados de color rojo pastel",
+      "precio": "138000"
+    },
+    {
+      "id": "4",
+      "Nombre": "Tenis nike",
+      "status": true,
+      "Detalle": "Tenis a prueba de agua y de sol, no se desgastan",
+      "precio": "35000"
+    }
+  ]
+}

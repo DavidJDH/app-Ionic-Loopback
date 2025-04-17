@@ -1,0 +1,84 @@
+<ion-text color="primary">
+  <h1 class="centered-header">Registro de factura</h1>
+</ion-text>
+
+<ion-list *ngIf="id!=null">
+  <ion-item>
+    <ion-label> Fecha: {{fecha}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label> Userid: {{userid}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label> Descuento: {{descuento}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label> Total: {{total}}</ion-label>
+  </ion-item>
+</ion-list>
+
+<form>
+  <ion-list>
+    <h4 class="ti">Producto</h4>
+    <ion-item>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col>Id</ion-col>
+          <ion-col>Nombre</ion-col>
+          <ion-col>Detalle</ion-col>
+          <ion-col>Agregar</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let item of items">
+          <ion-col>{{item.id}}</ion-col>
+          <ion-col>
+            <div *ngFor="let producto of productos">
+              <div *ngIf="item.producto_id==producto.id">
+                {{producto.nombre}}
+              </div>
+            </div>
+          </ion-col>
+          <ion-col> {{item.detalle}}</ion-col>
+          <ion-col>
+            <ion-button expand="block" fill="clear" shape="round" (click)="agregararticulo(item.producto_id)">
+              <ion-icon slot="start" name="add"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h4 class="ti">Articulos</h4>
+    <ion-item>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col>Id</ion-col>
+          <ion-col>Nombre</ion-col>
+          <ion-col>Detalle</ion-col>
+          <ion-col>Precio</ion-col>
+          <ion-col>Agregar</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let articulo of articulos">
+          <ion-col>{{articulo.id}}</ion-col>
+          <ion-col>{{articulo.nombre}}</ion-col>
+          <ion-col>{{articulo.detalle}}</ion-col>
+          <ion-col>{{articulo.precio}}</ion-col>
+          <ion-col>
+            <ion-button expand="block" fill="clear" shape="round" (click)="removerarticulo(articulo.id)">
+              <ion-icon slot="start" name="close"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-button color="success" (click)="registrarfactura()">Guardar</ion-button>
+        <ion-button color="success"><a [routerLink]="['/facturas']" routerLinkActive="router-link-active"
+            style="text-decoration: none;">Atras</a></ion-button>
+      </ion-grid>
+    </ion-item>
+
+  </ion-list>
+
+
+
+
+</form>

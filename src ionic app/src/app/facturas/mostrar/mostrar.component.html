@@ -1,0 +1,29 @@
+<ion-text color="primary">
+  <h1 class="centered-header">Registro de factura</h1>
+</ion-text>
+
+<ion-item>
+  <ion-grid fixed>
+    <ion-row >
+      <ion-col size="6">Codigo</ion-col>
+      <ion-col size="6"></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let factura of facturas">
+      <ion-col size="6">{{factura.id}}</ion-col>
+      <ion-col size="6">
+        <ion-button [routerLink]="['/registrar',factura.id]">
+          <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+        </ion-button>
+        <ion-button color="danger" (click)="eliminar(factura.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+
+<ion-item class="ion-justify-content-center">
+  <ion-button color="success"><a [routerLink]="['/principal']" routerLinkActive="router-link-active"
+    style="text-decoration: none;">Atras</a></ion-button>
+</ion-item>

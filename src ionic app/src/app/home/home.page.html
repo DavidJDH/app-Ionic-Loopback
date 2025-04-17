@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <!--<ion-toolbar>
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar> -->
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <!-- <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar> -->    
+  </ion-header>
+
+  <div id="container">
+  <form [formGroup]="loginform" (ngSubmit)="loggear()">
+    <ion-item>
+
+      <ion-label><ion-icon name="archive"></ion-icon></ion-label>
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="reload-circle"></ion-icon></ion-label>
+      <ion-input type="password" placeholder="Password" formControlName="clave"></ion-input>
+    </ion-item>
+    <section class="bt">
+      <ion-button color="success" type="ngSubmit">Iniciar</ion-button>
+    </section>
+  </form>
+  </div>
+
+  <div class="bacground-container">
+    <section class="centrar">
+      <h1>INICIAR SESION</h1>
+    </section>  
+  </div>
+
+
+</ion-content>

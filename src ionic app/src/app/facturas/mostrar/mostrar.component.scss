@@ -1,0 +1,26 @@
+.centered-header {
+    text-align: center;
+}
+
+ion-item{
+    --ion-item-background:transparent; 
+    --border-width:0;
+    --inner-border-width:0;
+    --highlight-color-focus:none ; 
+
+    ion-label{
+        width: 247px;
+        height: 500px;
+        border-radius: 0px;
+        border: 1px solid #198645;
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        --padding-start:30px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+}
+}
+

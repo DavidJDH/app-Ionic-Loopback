@@ -1,0 +1,89 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content{
+  --ion-background-color:#fff;
+}
+
+.bacground-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background: url("./../../assets/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  .centrar{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    text-shadow: 2px 2px black;
+    font-size: 25px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    line-height: 1.5; 
+}
+}
+
+.centered-header {
+  text-align: center;
+}
+
+ion-item{
+  --ion-item-background:transparent; 
+  --border-width:0;
+  --inner-border-width:0;
+  --highlight-color-focus:none ; 
+
+  ion-input{
+      width: 247px;
+      height: 42px;
+      border-radius: 15px;
+      border: 1px solid #198645;
+      font-size: 14px;
+      font-weight: 300;
+      color: white;
+      --padding-start:30px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+}
+}
+
+.bt{
+  position: absolute;
+  top: 140%;
+  left: 40%;
+}
+
+

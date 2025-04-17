@@ -1,0 +1,78 @@
+<ion-content>
+  <ion-text color="primary" class="ion-text-center">
+    <h1 class="centered-header">Registro de item</h1>
+  </ion-text>
+
+  <form [formGroup]="formitem">
+    <ion-list>
+      <ion-item>
+        <ion-label position="fixed">Id</ion-label>
+        <ion-input formControlName="id"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Detalle</ion-label>
+        <ion-input formControlName="detalle"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Producto</ion-label>
+        <ion-select formControlName="producto" placeholder="Select producto">
+          <ion-select-option *ngFor="let producto of productos"
+            value="{{producto.id}}">{{producto.nombre}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-item>
+      <ion-button color="warning" [disabled]="button" (click)="registraritem()">
+        Registrar
+      </ion-button>
+      <ion-button [disabled]="!button" (click)="actualizaritem()">
+        Actualizar
+      </ion-button>
+      <ion-button color="medium" (click)="limpiar()">
+        Limpiar
+      </ion-button>
+      <ion-button color="success" [routerLink]="['/principal']">Atras</ion-button>
+    </ion-item>
+  </form>
+
+  <ion-grid class="ion-margin-top">
+    <ion-row>
+      <ion-col>
+        Id
+      </ion-col>
+      <ion-col>
+        Detalle
+      </ion-col>
+<!--       <ion-col>
+        Producto_id
+      </ion-col> -->
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of items">
+      <ion-col>
+        {{item.id}}
+      </ion-col>
+      <ion-col>
+        {{item.detalle}}
+      </ion-col>
+   <!--    <ion-col>
+        {{item.producto_id}}
+      </ion-col> -->
+      <ion-col>
+        <ion-button size="small" color="danger" (click)="eliminaritem(item.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+        <ion-button size="small" (click)="onitem(item.id)">
+          <ion-icon slot="icon-only" name="pencil"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
